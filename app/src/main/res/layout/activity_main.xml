@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:id="@+id/rlRoot"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rlWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@color/cardview_dark_background"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:id="@+id/txtCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"/>
+
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txtCity"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtLat"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Latitude"-->
+<!--                android:textSize="16dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@+id/txtTime"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtLon"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Longitude"-->
+<!--                android:textSize="16dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@+id/txtLat"-->
+<!--                />-->
+
+            <TextView
+                android:id="@+id/txtGeocoded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geo-Coded:-"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txtTime"
+                android:layout_marginTop="50dp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/txtValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="3°"
+                android:textSize="70dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+
+                />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:id="@+id/txtTitleFeelLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temparature"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtValueFeelLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitleFeelLike"
+                android:layout_alignLeft="@+id/txtTitleFeelLike"
+                android:text="7°"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/txtTitleHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtValueFeelLike"
+                android:layout_marginTop="50dp"
+                android:layout_alignTop="@+id/txtValueFeelLike"
+                android:text="Humidity"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtValueHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitleHumidity"
+                android:layout_alignLeft="@+id/txtTitleHumidity"
+                android:text="7°"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/txtTitleDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtValueHumidity"
+                android:layout_marginTop="50dp"
+                android:layout_alignTop="@+id/txtValueHumidity"
+                android:text="Description"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txtValueDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitleDescription"
+                android:layout_alignLeft="@+id/txtTitleDescription"
+                android:text="7°"
+                android:textSize="20dp"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt"
+        android:layout_centerHorizontal="true"
+        android:text="Enter"
+        android:onClick="Loading"
+        />
+
+</RelativeLayout>
